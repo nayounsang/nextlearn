@@ -1,7 +1,7 @@
-import { URL } from "../../app/(home)/page";
+import { API_URL } from "../../const/url";
 
 async function getVideos(id: string) {
-  const res = await fetch(`${URL}/${id}/videos`);
+  const res = await fetch(`${API_URL}/${id}/videos`);
   return res.json();
 }
 
