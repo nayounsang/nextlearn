@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "airbnb-base",
+    "prettier",
+  ],
+  "plugins": ["import"],
+  "rules": {
+    "prettier/prettier": "error",
+    "max-len": ["error", { "ignoreTemplateLiterals": false }],
+    "import/extensions": [
+      "warn",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+      },
+    ],
+    "import/prefer-default-export": "warn",
+  },
+}

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { API_URL } from "../../const/url";
+import MovieElement from "../../components/movie-element";
 
 export const metadata: Metadata = {
   title: "home",
@@ -16,9 +16,12 @@ export default async function Page() {
   return (
     <ul>
       {movies.map((movie) => (
-        <li key={movie.id}>
-          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-        </li>
+        <MovieElement
+          key={movie.id}
+          id={movie.id}
+          title={movie.title}
+          imgURL={movie.poster_path}
+        />
       ))}
     </ul>
   );
