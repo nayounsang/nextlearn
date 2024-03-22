@@ -15,14 +15,14 @@ export default function MovieElement({
 }) {
   return (
     <li className={containerStyle}>
-      <Image
-        src={imgURL}
-        alt={title}
-        className={imageStyle}
-        width={100}
-        height={100}
-      />
       <Link href={`/movies/${id}`} className={textStyle}>
+        <Image
+          src={imgURL}
+          alt={title}
+          width={1000}
+          height={300}
+          className={imageStyle}
+        />
         {title}
       </Link>
     </li>

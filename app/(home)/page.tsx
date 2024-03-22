@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { API_URL } from "../../const/url";
 import MovieElement from "../../components/movie-element";
+import { pageStyle } from "./page.css";
 
 export const metadata: Metadata = {
   title: "home",
@@ -14,7 +15,7 @@ async function getMovies() {
 export default async function Page() {
   const movies = await getMovies();
   return (
-    <ul>
+    <ul className={pageStyle}>
       {movies.map((movie) => (
         <MovieElement
           key={movie.id}

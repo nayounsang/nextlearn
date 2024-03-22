@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <link rel="preconnect" href="https://youtube.com"></link>
       <body>
         <NavigationBar />
         {children}
